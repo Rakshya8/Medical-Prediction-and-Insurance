@@ -1,0 +1,15 @@
+version: '3'
+services:
+   dash-demo:
+    #command: python app.py
+    # command: tail -f /dev/null
+    image: group_6:a1
+    build: 
+      context: .
+      dockerfile: .Dockerfile
+    ports:
+      - 9999:8050
+    volumes:
+      - ./source_code:/source_code/code
+      - ./vscode-server:/root/.vscode-server
+
